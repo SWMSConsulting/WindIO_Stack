@@ -1,0 +1,11 @@
+[tcp]
+    [tcp.services]
+        [tcp.services.hivemq]
+            [tcp.services.hivemq.loadBalancer]
+                [[tcp.services.hivemq.loadBalancer.servers]]
+                    address = "hivemq:1883"
+
+        [tcp.services.hivemq-ws]
+            [tcp.services.hivemq-ws.loadBalancer]
+                [[tcp.services.hivemq-ws.loadBalancer.servers]]
+                    address = "hivemq:1884"

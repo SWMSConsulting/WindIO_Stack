@@ -1,0 +1,11 @@
+[tcp]
+    [tcp.routers]
+        [tcp.routers.mqtt-router]
+            entryPoints = ["mqtt"]
+            service = "hivemq"
+            rule = "HostSNI(`*`)"
+
+        [tcp.routers.mqtt-websockets-router]
+            entryPoints = ["websockets"]
+            service = "hivemq-ws"
+            rule = "HostSNI(`*`)"
