@@ -53,6 +53,8 @@ services:
             - 1884
         links: 
             - telegraf
+        volumes: 
+            - ./hivemq:/opt/hivemq-ce-2021.2/extensions
         restart: always
         networks: 
             - "iotstack"
